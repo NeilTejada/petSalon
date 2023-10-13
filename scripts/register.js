@@ -1,35 +1,41 @@
-let salon = {
-  name: "The Fashion Pet",
-  address: {
-    street: "Palm Ave.",
-    number: "123",
-    zip: "111456",
-  },
-  hours: {
-    open: "9:00 am",
-    close: "7:00 pm",
-  },
-  pets: [
-    {
-      name: "Tito",
-      age: 3,
-    },
-    {
-      name: "Moco",
-      age: 1,
-    },
-  ],
-};
+let pets = [];
 
-function displayInfo() {
-  document.getElementById(
-    "pets"
-  ).innerHTML = `Welcome to ${salon.name}, our store hours are: ${salon.hours.open} to ${salon.hours.close}.`;
-}
-displayInfo();
+function addPet() {
+  const name = document.getElementById("name").value;
+  const age = document.getElementById("age").value;
+  const gender = document.getElementById("gender").value;
+  const breed = document.getElementById("breed").value;
+  const service = document.getElementById("service").value;
 
-function displayPetNames() {
-  console.log(salon.pets[0].name);
-  console.log(salon.pets[1].age);
+  const newPet = {
+    name: name,
+    age: age,
+    gender: gender,
+    breed: breed,
+    service: service,
+  };
+  pets.push(newPet);
+  displayPets();
 }
-displayPetNames();
+function Pet() {}
+
+function displayPets() {
+  const petList = document.getElementById("pet-list");
+  petList.innerHTML = "";
+
+  pets.forEach((pet, index) => {
+    const petInfo = document.createElement("div");
+    petInfo.classList.add("pet-info");
+    petInfo.innerHTML = `
+      <p>${index + 1}. Name: ${pet.name}</p>
+      <p>Age: ${pet.age}</p>
+      <p>Gender: ${pet.gender}</p>
+      <p>Breed: ${pet.breed}</p>
+      <p>Service: ${pet.service}</p>
+    `;
+    petList.appendChild(petInfo);
+  });
+}
+function regitster() {}
+
+function init() {}

@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://getbootstrap.com/docs/5.3/forms/form-control/"
+    />
     <link rel="stylesheet" href="./styles/mystyles.css" />
     <title>Register</title>
   </head>
@@ -15,9 +19,63 @@
         <a href="register.html">Register</a>
       </nav>
     </header>
-    <main>
+    <main class="container">
       <h2>Register</h2>
-      <div id="pets"></div>
+      <div id="pets">
+        <h3>Add a Pet:</h3>
+        <div class="container">
+          <div class="mb-3">
+            <label class="form-label">Name:</label>
+            <input type="text" class="form-control" placeholder="Pet's name" />
+          </div>
+          <div class="container">
+            <div class="mb-3">
+              <label class="form-control">Age:</label>
+              <input
+                type="number"
+                class="form-control"
+                id="txtAge"
+                placeholder="Pet's age"
+              />
+            </div>
+          </div>
+          <div class="container">
+            <div class="mb-3">
+              <label class="form-control">Gender:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="txtGender"
+                placeholder="Pet's gender"
+              />
+            </div>
+          </div>
+          <div class="container">
+            <div class="mb-3">
+              <label class="form-control">Breed:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="txtBreed"
+                placeholder="Pet's breed"
+              />
+            </div>
+          </div>
+          <div class="container">
+            <div class="mb-3">
+          <label class="form-control">Service:</label>
+          <select id="service" required>
+            <option value="Bath">Bath</option>
+            <option value="Nail Clipping">Nail Clipping</option>
+            <option value="Fur Trim">Fur Trim</option></select
+          >
+          </div>
+          </div>
+
+          <button type="button" onclick="addPet()">Add Pet</button>
+        </div>
+      </div>
+      <div id="pet-list"></div>
     </main>
 
     <script src="./scripts/register.js"></script>
