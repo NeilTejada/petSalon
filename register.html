@@ -70,14 +70,35 @@
               id="service"
               placeholder="Select a service"
             >
-            <option value="Select">Select a service</option>
-              <option value="Bath">Bath</option>
-              <option value="Nail Clipping">Nail Clipping</option>
-              <option value="Fur Trim">Fur Trim</option>
+              <option value="select-service">Select a service</option>
+              <option value="the-works">The Works</option>
+              <option value="nail-clipping">Nail Clipping</option>
+              <option value="fur-trimming">Fur Trimmming</option>
+              <option value="teeth">Teeth Brushing</option>
+              <option value="ear-cleaning">Ear Cleaning</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Type of Animal:</label>
+            <select
+              class="form-select"
+              id="type-of-animal"
+              placeholder="Select correct animal"
+            >
+              <option value="select-service">Select correct animal</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+              <option value="snake">Snake</option>
+              <option value="turtle">Turtle</option>
+              <option value="rabbit">Rabbit</option>
             </select>
           </div>
 
           <button class="btn btn-primary" onclick="addPet()">Add Pet</button>
+          <button class="btn btn-warning" onclick="clearForm()">
+            Clear Form
+          </button>
         </div>
       </div>
       <div id="pet-list"></div>
