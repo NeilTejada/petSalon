@@ -18,7 +18,7 @@ function addPet() {
   const gender = document.getElementById("txtGender").value;
   const breed = document.getElementById("txtBreed").value;
   const service = document.getElementById("service").value;
-  const type = document.getElementById("type-of-animal").value;
+  const type = document.getElementById("typeOfAnimal").value;
 
   const newPet = new Pet(name, age, gender, breed, service, type);
   console.log(newPet);
@@ -29,7 +29,7 @@ function addPet() {
 }
 
 function displayPets() {
-  const petList = document.getElementById("pet-list");
+  const petList = document.getElementById("petList");
   petList.innerHTML = "";
 
   salon.pets.forEach((pet, index) => {
