@@ -72,12 +72,8 @@
 
           <div class="mb-3">
             <label class="form-label">Type of Service:</label>
-            <select
-              class="form-select"
-              id="service"
-              placeholder="Select a service"
-            >
-              <option value="select-service">Select a service</option>
+            <select class="form-select" id="service">
+              <option value="" selected disabled>-- Select a service --</option>
               <option value="theWorks">The Works</option>
               <option value="nailClipping">Nail Clipping</option>
               <option value="furTrimming">Fur Trimmming</option>
@@ -88,12 +84,10 @@
 
           <div class="mb-3">
             <label class="form-label">Type of Animal:</label>
-            <select
-              class="form-select"
-              id="typeOfAnimal"
-              placeholder="Select correct animal"
-            >
-              <option value="selectService">Select animal</option>
+            <select class="form-select" id="typeOfAnimal">
+              <option value="selectService" selected disabled>
+                -- Select animal --
+              </option>
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
               <option value="snake">Snake</option>
@@ -103,14 +97,15 @@
           </div>
 
           <button class="btn btn-primary" onclick="addPet()">Add Pet</button>
-          <button class="btn btn-warning" onclick="clearForm()">
-            Clear Form
-          </button>
         </div>
       </div>
+
+      <h2>Pets on the system</h2>
+
       <div id="petList"></div>
     </main>
 
     <script src="./scripts/register.js"></script>
+    <script src="./scripts/display.js"></script>
   </body>
 </html>
