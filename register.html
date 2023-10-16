@@ -22,7 +22,6 @@
         <nav>
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
-          <a href="register.html">Register</a>
         </nav>
       </div>
     </header>
@@ -35,7 +34,7 @@
             <input
               type="text"
               class="form-control"
-              id="name"
+              id="txtName"
               placeholder="Pet's name"
             />
           </div>
@@ -72,7 +71,7 @@
 
           <div class="mb-3">
             <label class="form-label">Type of Service:</label>
-            <select class="form-select" id="service">
+            <select class="form-select" id="txtService">
               <option value="" selected disabled>-- Select a service --</option>
               <option value="theWorks">The Works</option>
               <option value="nailClipping">Nail Clipping</option>
@@ -84,10 +83,8 @@
 
           <div class="mb-3">
             <label class="form-label">Type of Animal:</label>
-            <select class="form-select" id="typeOfAnimal">
-              <option value="selectService" selected disabled>
-                -- Select animal --
-              </option>
+            <select class="form-select" id="txtTypeOfAnimal">
+              <option value="" selected disabled>-- Select animal --</option>
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
               <option value="snake">Snake</option>

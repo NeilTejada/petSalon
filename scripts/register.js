@@ -10,24 +10,54 @@ function Pet(name, age, gender, breed, service, type) {
   this.petType = type;
 }
 
-const inputName = document.getElementById("name");
+let inputName = document.getElementById("txtName");
 let inputAge = document.getElementById("txtAge");
 let inputGender = document.getElementById("txtGender");
 let inputBreed = document.getElementById("txtBreed");
-let inputService = document.getElementById("service");
-let inputType = document.getElementById("typeOfAnimal");
+let inputService = document.getElementById("txtService");
+let inputType = document.getElementById("txtTypeOfAnimal");
 
 function isPetValid(aPet) {
+  // let petValidation = true;
+
+  // if (aPet.petName == "") {
+  //   petValidation = false;
+  //   inputName.classList.add("error");
+  // }
+  // if (aPet.petAge === "") {
+  //   petValidation = false;
+  //   inputAge.classList.add("error");
+  // }
+  // return petValidation;
+  const petFieldNames = [
+    "petName",
+    "petAge",
+    "petGender",
+    "petBreed",
+    "petService",
+    "petType",
+  ];
   let petValidation = true;
 
-  if (aPet.petName == "") {
-    petValidation = false;
-    inputName.classList.add("error");
-  }
-  if (aPet.petService == "") {
-    petValidation = false;
-    inputService.classList.add("error");
-  }
+  const inputFieldValues = {
+    petName: inputName,
+    petAge: inputAge,
+    petGender: inputGender,
+    petBreed: inputBreed,
+    petService: inputService,
+    petType: inputType,
+  };
+
+  petFieldNames.forEach((fieldName) => {
+    const inputValue = aPet[fieldName];
+    const inputElement = inputFieldValues[fieldName];
+
+    if (inputValue === "") {
+      petValidation = false;
+      inputElement.classList.add("error");
+    }
+  });
+
   return petValidation;
 }
 
