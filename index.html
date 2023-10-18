@@ -3,17 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/mystyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Luxurious+Script&family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <title>Home Page</title>
   </head>
   <body>
     <header>
       <h1>The Fashion Pet</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="register.html">Register</a>
-      </nav>
     </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="register.html">Register</a>
+    </nav>
     <main>
       <h2>Welcome</h2>
       <p>
@@ -21,7 +37,45 @@
         facilis, nam eius doloribus quaerat quod eum cum tenetur minima maxime,
         dicta repellendus quas. Delectus dolore fugit adipisci consequatur!
       </p>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card" style="height: 100%">
+              <img
+                src="./images/PPM-Photo-Stock-Dog-Grooming-2.jpg"
+                class="card-img-top"
+                style="height: 100%"
+              />
+              <div class="card-body" style="height: 100%">
+                <h5 class="card-title">Services</h5>
+                <p class="card-text">
+                  Please click below to see the services we provide.
+                </p>
+                <a href="./services.html" class="btn btn-primary">Services</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card" style="height: 100%">
+              <img
+                src="./images/istockphoto-1326279803-612x612.jpg"
+                class="card-img-top"
+                style="height: 100%"
+              />
+              <div class="card-body" style="height: 100%">
+                <h5 class="card-title">Register</h5>
+                <p class="card-text">
+                  Please click below to register your animal.
+                </p>
+                <a href="./register.html" class="btn btn-primary">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pets-home"></div>
     </main>
     <footer></footer>
+    <script src="./scripts/home.js"></script>
   </body>
 </html>

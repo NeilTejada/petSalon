@@ -1,5 +1,6 @@
 let salon = { pets: [] };
 
+let counter = 0;
 //object constructor
 function Pet(name, age, gender, breed, service, type) {
   this.petName = name;
@@ -8,6 +9,7 @@ function Pet(name, age, gender, breed, service, type) {
   this.petBreed = breed;
   this.petService = service;
   this.petType = type;
+  this.petId = counter++;
 }
 
 let inputName = document.getElementById("txtName");
@@ -39,7 +41,7 @@ function isPetValid(aPet) {
   ];
   let petValidation = true;
 
-  const inputFieldValues = {
+  let inputFieldValues = {
     petName: inputName,
     petAge: inputAge,
     petGender: inputGender,
@@ -49,8 +51,9 @@ function isPetValid(aPet) {
   };
 
   petFieldNames.forEach((fieldName) => {
-    const inputValue = aPet[fieldName];
-    const inputElement = inputFieldValues[fieldName];
+    let inputValue = aPet[fieldName];
+    let inputElement = inputFieldValues[fieldName];
+    inputElement.classList.remove("error");
 
     if (inputValue === "") {
       petValidation = false;
@@ -67,7 +70,6 @@ function addPet() {
     inputAge.value,
     inputGender.value,
     inputBreed.value,
-    inputGender.value,
     inputService.value,
     inputType.value
   );
