@@ -26,6 +26,15 @@ nav a {
 .error {
   background-color: red;
 }
+#total {
+  font-size: 14px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: orangered;
+  padding: 2px;
+  color: white;
+}
 
 /*pet list*/
 #petList {

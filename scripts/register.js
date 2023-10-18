@@ -9,7 +9,7 @@ function Pet(name, age, gender, breed, service, type) {
   this.petBreed = breed;
   this.petService = service;
   this.petType = type;
-  this.petId = counter++;
+  this.petID = counter++;
 }
 
 let inputName = document.getElementById("txtName");
@@ -75,32 +75,14 @@ function addPet() {
   );
   if (isPetValid(newPet) == true) {
     salon.pets.push(newPet);
-    displayPetCards();
+    //displayPetCards();
+    displayTable();
     //displayPets();
     clearPetForm();
   }
 
   console.log(salon.pets);
 }
-
-// function displayPets() {
-//   const petList = document.getElementById("petList");
-//   petList.innerHTML = "";
-
-//   salon.pets.forEach((pet, index) => {
-//     const petInfo = document.createElement("div");
-//     petInfo.classList.add("pet-info");
-//     petInfo.innerHTML = `
-//       <p>${index + 1}. Name: ${pet.petName}</p>
-//       <p>Age: ${pet.petAge}</p>
-//       <p>Gender: ${pet.petGender}</p>
-//       <p>Breed: ${pet.petBreed}</p>
-//       <p>Type of Service: ${pet.petService}</p>
-//       <p>Type of Animal: ${pet.petType}</p>
-//     `;
-//     petList.appendChild(petInfo);
-//   });
-// }
 
 function clearPetForm() {
   (inputName.value = ""),
@@ -110,6 +92,26 @@ function clearPetForm() {
     (inputGender.value = ""),
     (inputService.value = ""),
     (inputType.value = "");
+}
+
+function deletePet(ID) {
+  console.log("Deleting pet" + ID);
+  let deleteIndex;
+
+  //remove from html
+  document.getElementById(ID).remove();
+
+  //remove from the array
+  for (let i = 0; i < salon.pets.length; i++) {
+    let pet = salon.pets[i];
+    if (pet.petID == ID) {
+      deleteIndex = i;
+    }
+  }
+  salon.pets.splice(deleteIndex, 1);
+  //displayPetCards();
+  //displayTable();
+  displayTable();
 }
 
 function init() {
@@ -125,6 +127,7 @@ function init() {
   salon.pets.push(pet1, pet2);
   console.log(pet1);
   console.log(pet2);
-  displayPetCards();
+  //displayPetCards();
+  displayTable();
 }
 window.onload = init;
