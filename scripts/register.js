@@ -1,3 +1,9 @@
+function displayInfo() {
+  document.getElementById("pet-header").innerHTML = `
+  <p>"Servicing all your furry animals!"</p>`;
+}
+displayInfo();
+
 let salon = { pets: [] };
 
 let counter = 0;
@@ -20,17 +26,6 @@ let inputService = document.getElementById("txtService");
 let inputType = document.getElementById("txtTypeOfAnimal");
 
 function isPetValid(aPet) {
-  // let petValidation = true;
-
-  // if (aPet.petName == "") {
-  //   petValidation = false;
-  //   inputName.classList.add("error");
-  // }
-  // if (aPet.petAge === "") {
-  //   petValidation = false;
-  //   inputAge.classList.add("error");
-  // }
-  // return petValidation;
   const petFieldNames = [
     "petName",
     "petAge",
@@ -110,20 +105,12 @@ function deletePet(ID) {
   }
   salon.pets.splice(deleteIndex, 1);
   //displayPetCards();
-  //displayTable();
   displayTable();
 }
 
 function init() {
   let pet1 = new Pet("Scooby", 70, "Male", "Dane", "The Works", "Dog");
-  let pet2 = new Pet(
-    "Scrappy,",
-    2,
-    "Female",
-    "Bully",
-    "Ear cleaning",
-    "Rabbit"
-  );
+  let pet2 = new Pet("Scrappy", 2, "Female", "Bully", "Ear cleaning", "Rabbit");
   salon.pets.push(pet1, pet2);
   console.log(pet1);
   console.log(pet2);
