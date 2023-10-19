@@ -1,19 +1,16 @@
 let salon = {
-  name: "The Fashion Pet",
-  address: {
-    street: "Palm Ave.",
-    number: "123",
-    zip: "111456",
-  },
   hours: {
-    open: "9:00 am",
-    close: "7:00 pm",
+    weekdays: "8:00am - 7:00pm",
+    weekends: "9:00am - 5:00pm",
+    sunday: "CLOSED ON SUNDAY!",
   },
 };
 
 function displayInfo() {
+  document.getElementById("pet-header").innerHTML = `
+  <p>"Servicing all your furry animals!"</p>`;
   document.getElementById(
     "pets-home"
-  ).innerHTML = `Welcome to ${salon.name}, our store hours are: ${salon.hours.open} to ${salon.hours.close}.`;
+  ).innerHTML = `<p>We are open Monday thru Friday: ${salon.hours.weekdays}, Saturday:  ${salon.hours.weekends}, and ${salon.hours.sunday}</p>`;
 }
 displayInfo();
