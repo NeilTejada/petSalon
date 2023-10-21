@@ -1,4 +1,4 @@
-// #region 
+// #region
 // function displayPetCards() {
 //   console.log("Displaying");
 //   console.log(salon.pets);
@@ -38,7 +38,7 @@ function getTotal() {
 
 function displayTable() {
   // Get the DIV element to display the pet data
-  const DIV = document.getElementById("petTable");
+  const TABLE = document.getElementById("petTable");
 
   // Initialize the HTML content with the table headers
   let tr = "";
@@ -61,6 +61,6 @@ function displayTable() {
   }
 
   // Insert the content into the register.html
-  DIV.innerHTML = tr;
+  TABLE.innerHTML = tr;
   getTotal();
 }
